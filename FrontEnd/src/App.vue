@@ -1,85 +1,50 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
+  <section>
+    <div class="header">
+      <RouterLink to="/">Overtime</RouterLink>
+      <div class="header-right">
         <RouterLink to="/about">About</RouterLink>
-      </nav>
+        <div class="dropdown">
+        <RouterLink to="/about">User</RouterLink>
+        </div>
+      </div>
     </div>
-  </header>
-
+  </section>
   <RouterView />
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+.header {
+  font-family:'revamped';
+  font-size: 40px;
+  width: 99%;
+  background-color: #292726;
+  padding: 0px 20px 0px 0px;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.header-right {
+  float: right;
+  color: rgb(189, 132, 0);
 }
-
-nav {
-  width: 100%;
-  font-size: 12px;
+.dropdown{
+  float: right;
+}
+a,
+.orange {
+  text-decoration: none;
+  color: rgb(189, 132, 0);
+  transition: 0.4s;
+  padding: 3px;
   text-align: center;
-  margin-top: 2rem;
+  text-decoration: none;
+  border-radius: 4px;
 }
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(37, 80%, 27%, 0.2);
   }
 }
 </style>
